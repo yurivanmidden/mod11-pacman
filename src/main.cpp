@@ -11,6 +11,8 @@
 #include "../include/UI.h"
 #include "../include/Game.h"
 
+void test() {}
+
 /// Callback function to update the game state.
 ///
 /// This function is called by an SDL timer at regular intervals.
