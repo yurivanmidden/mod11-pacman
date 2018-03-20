@@ -6,3 +6,4 @@ Assignment_6.*
 compile_and_run_pacman_x64.bat
 compile_and_run_pacman_x86.bat
 SDL2.dll
+.vs
