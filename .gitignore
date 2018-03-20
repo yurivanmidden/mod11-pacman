@@ -1,9 +1,8 @@
-html
-pacman
+compile_x64
+compile_x86
 Debug
-Release
-SDL2.dll
 obj
-*.exe
-pacman.exp
-pacman.lib
+Assignment_6.*
+compile_and_run_pacman_x64.bat
+compile_and_run_pacman_x86.bat
+SDL2.dll
