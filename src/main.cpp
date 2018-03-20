@@ -78,7 +78,7 @@ int main(int /*argc*/, char ** /*argv*/)
         ui.setLives(game.getLives()); // <-- Pass correct value to the setter
 
         // Render the scene
-        std::vector<GameObjectStruct> objects = {pacman};
+        std::vector<GameObjectStruct> objects = {game.getStructs()};
         // ^-- Your code should provide this vector somehow (e.g.
         // Game->getStructs())
         ui.update(objects);

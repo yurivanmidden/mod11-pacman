@@ -18,15 +18,16 @@ private:
 public:
     Game() : score(0), lives(3) {
 
-        Character pacman(PACMAN);
     }
 
     void init() {
 
     }
 
-    std::vector getStructs() {
-
+    // TODO: This convention is not right
+    std::vector<GameObjectStruct> getStructs() {
+        Character pacman(PACMAN);
+        return {pacman.getStruct()};
     }
 
     int getScore() const {
