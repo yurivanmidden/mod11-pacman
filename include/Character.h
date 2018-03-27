@@ -5,44 +5,38 @@
 #ifndef PACMAN_CHARACTER_H
 #define PACMAN_CHARACTER_H
 
-
 #include "GameObjectStruct.h"
+#include "CharacterAI.h"
+//#include <list>
 
 class Character {
 private:
     GameObjectStruct object;
-    Type type;
-    int x;
-    int y;
-    Direction dir;
+	CharacterAI AI;
+//	static std::list<GameObjectStruct*> objectList;//List to track characters
 
 public:
-    Character(Type t) : type(t), x(1), y(1), dir(UP) {
-        object.x = x;
-        object.y = y;
-        object.type = t;
-        object.dir = dir;
-    }
+	Character() {}//Default constructor for compiler
+	Character(GameObjectStruct input);
 
-    GameObjectStruct getStruct();
+	//Character Getters
+	Direction getDirection() { return object.dir; }
+	int getX() { return object.x; }
+	int getY() { return object.y; }
+	Type getType() { return object.type; }
+	GameObjectStruct getStruct() { return object; }//Get the whole object
 
-    void setStruct(GameObjectStruct s);
+	//Character Setters
+	void setX(int X) { object.x = X; }
+	void setY(int Y) { object.y = Y; }
+	void setType(Type type) { object.type = type; }//Use for changing ghost
+	void setDirection(Direction direction) { object.dir = direction; }
 
-    Type getType() const;
+	void setDirectionAI() { AI.setDirection(object); }
 
-    void setType(Type type);
+	
 
-    int getX() const;
-
-    void setX(int x);
-
-    int getY() const;
-
-    void setY(int y);
-
-    Direction getDir() const;
-
-    void setDir(Direction dir);
+//	std::list<GameObjectStruct*> getList() { return objectList; } //Function to get list of packages
 
 };
 
