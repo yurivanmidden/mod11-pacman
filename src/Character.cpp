@@ -6,8 +6,9 @@
 
 //std::list<GameObjectStruct*> Character::objectList;
 
-Character::Character(GameObjectStruct input) {//Construct character and AI
-	object = input;
-	AI = CharacterAI(object.type);
+Character::Character(GameObjectStruct inputObject, std::vector<int> home, std::vector<int> entrance, std::vector<int> corner) {//Construct character and AI
+	object = inputObject;
+//	home = { inputObject.x, inputObject.y };
+	AI = CharacterAI(object.type, home, entrance, corner);
 //	Character::objectList.push_back(&object);
 }

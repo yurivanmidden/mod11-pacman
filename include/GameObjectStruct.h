@@ -43,6 +43,10 @@ enum Type {
 /// An enum to denote the direction of an item on screen.
 enum Direction { UP, DOWN, LEFT, RIGHT };
 
+// Ghost states
+//enum State { INACTIVE, ENTER, HUNT, DISPERSE, RUN, DEAD };
+enum State {IDLE, START, ACTIVE, DEAD, RESPAWN };
+
 /// This represents an item that is drawn onto the screen.
 struct GameObjectStruct {
     /// x-position of the item.
