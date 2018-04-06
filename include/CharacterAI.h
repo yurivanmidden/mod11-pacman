@@ -13,7 +13,7 @@
 #include <stdlib.h>//Required for random number generator
 #include <time.h>//Required for random seed
 
-#include "GameObjectStruct.h"
+#include "../include/GameObjectStruct.h"
 
 //Ghost states
 enum State { IDLE, START, ACTIVE, DEAD, RESPAWN };

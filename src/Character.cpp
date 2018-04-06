@@ -8,9 +8,9 @@
 
 #include <vector>
 
-#include "GameObjectStruct.h"
-#include "CharacterAI.h"
-#include "Character.h"
+#include "../include/GameObjectStruct.h"
+#include "../include/CharacterAI.h"
+#include "../include/Character.h"
 
 //Constructor
 Character::Character(GameObjectStruct inputObject, std::vector<int> entrance, std::vector<int> corner) {

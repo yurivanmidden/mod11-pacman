@@ -154,7 +154,7 @@ int main(int /*argc*/, char ** /*argv*/)
 		//If the ghost is not vulnerable, ghostCollision() returns true and the level will be reinitialized.
 		if (game.ghostCollision()) {
 			if (game.getLives() > 0) {
-//				game.initDeath();//Restart without resetting the board if the player has lives left.
+				game.initDeath();//Restart without resetting the board if the player has lives left.
 			}
 			else {
 				game.initNew();//Start a new game if the player is out of lives.

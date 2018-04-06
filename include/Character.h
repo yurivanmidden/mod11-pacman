@@ -11,8 +11,8 @@
 
 #include <vector>
 
-#include "GameObjectStruct.h"
-#include "CharacterAI.h"
+#include "../include/GameObjectStruct.h"
+#include "../include/CharacterAI.h"
 
 class Character {
 private:

@@ -13,8 +13,8 @@
 #include <stdlib.h>//Required for random number generator
 #include <time.h>//Required for random seed
 
-#include "GameObjectStruct.h"
-#include "Character.h"
+#include "../include/GameObjectStruct.h"
+#include "../include/Character.h"
 
 class Game {
 private:
