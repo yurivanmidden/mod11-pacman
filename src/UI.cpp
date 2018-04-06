@@ -192,14 +192,14 @@ void UI::loadMaps()
     lemon[DOWN] = lemon[UP];
     lemon[LEFT] = lemon[UP];
     lemon[RIGHT] = lemon[UP];
-    clips[LEMON] = lemon;
+    clips[BELL] = lemon;//It's not a lemon, it's a bell
 
     std::map<Direction, SDL_Rect> appel;
     appel[UP] = {o + size * 4, o + size * 5, size, size};
-    appel[DOWN] = appel[UP];
-    appel[LEFT] = appel[UP];
+	appel [DOWN] = appel[UP];
+	appel[LEFT] = appel[UP];
     appel[RIGHT] = appel[UP];
-    clips[APPEL] = appel;
+	clips[APPLE] = appel;//Fixed spelling
 
     std::map<Direction, SDL_Rect> grapes;
     grapes[UP] = {o + size * 5, o + size * 5, size, size};

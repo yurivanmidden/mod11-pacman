@@ -1,14 +1,31 @@
-//
-// Created by yuri on 20-3-18.
-//
+//==============================================================
+// Filename : Character.cpp
+// Authors : Brian Chang (s1387693), Yuri van Midden (s1496182)
+// Version :
+// License :
+// Description : Class definition of Character
+//==============================================================
 
-#include "../include/Character.h"
+#include <vector>
 
-//std::list<GameObjectStruct*> Character::objectList;
+#include "GameObjectStruct.h"
+#include "CharacterAI.h"
+#include "Character.h"
 
-Character::Character(GameObjectStruct inputObject, std::vector<int> home, std::vector<int> entrance, std::vector<int> corner) {//Construct character and AI
+//Constructor
+Character::Character(GameObjectStruct inputObject, std::vector<int> entrance, std::vector<int> corner) {
 	object = inputObject;
-//	home = { inputObject.x, inputObject.y };
-	AI = CharacterAI(object.type, home, entrance, corner);
-//	Character::objectList.push_back(&object);
+	AI = CharacterAI(inputObject, entrance, corner);
+}
+
+//Reinitialize character
+void Character::reinit() {
+	//Reset character type (in case of ghosts that are scared/dead)
+	object.type = AI.getName();
+	//Reset to starting direction and position
+	object.dir = AI.getStartDirection();
+	object.x = AI.getHome().at(0);
+	object.y = AI.getHome().at(1);
+	//Reinitialize AI
+	AI.reinit();
 }
