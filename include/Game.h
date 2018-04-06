@@ -80,13 +80,9 @@ private:
 
 private:
 	bool checkAt(Character character, int value);//Private: Check if square at character is equal to value
-	bool checkUp(Character character, int value);//Private: Check if square above character is equal to value
 	bool checkNotUp(Character character, int value);//Private: Check if square above character is not equal to value
-	bool checkDown(Character character, int value);//Private: Check if square below character is equal to value
 	bool checkNotDown(Character character, int value);//Private: Check if square below character is not equal to value
-	bool checkLeft(Character character, int value);//Private: Check if square left of character is equal to value
 	bool checkNotLeft(Character character, int value);//Private: Check if square left character is not equal to value
-	bool checkRight(Character character, int value);//Private: Check if square right of character is equal to value
 	bool checkNotRight(Character character, int value);//Private: Check if square right of character is not equal to value
 
 //---------------------------------------------------------------------------------------------------------------------------
@@ -182,7 +178,6 @@ public:
 	int getScore() { return score; }
 	int getLives() { return lives; }
 	std::vector<GameObjectStruct> getObjects();//Public: Get objects to be rendered
-
 };
 
 #endif //PACMAN_GAME_H

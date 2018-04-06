@@ -239,29 +239,9 @@ bool Game::checkAt(Character character, int value) {
 	}
 }
 
-//Private: Check if square above character is equal to value
-bool Game::checkUp(Character character, int value) {
-	if (map.at(character.getY() - 1).at(character.getX()) == value) {
-		return true;
-	}
-	else {
-		return false;
-	}
-}
-
 //Private: Check if square above character is not equal to value
 bool Game::checkNotUp(Character character, int value) {
 	if (map.at(character.getY() - 1).at(character.getX()) != value) {
-		return true;
-	}
-	else {
-		return false;
-	}
-}
-
-//Private: Check if square below character is equal to value
-bool Game::checkDown(Character character, int value) {
-	if (map.at(character.getY() + 1).at(character.getX()) == value) {
 		return true;
 	}
 	else {
@@ -279,29 +259,9 @@ bool Game::checkNotDown(Character character, int value) {
 	}
 }
 
-//Private: Check if square left of character is equal to value
-bool Game::checkLeft(Character character, int value) {
-	if (map.at(character.getY()).at(character.getX() - 1) == value) {
-		return true;
-	}
-	else {
-		return false;
-	}
-}
-
 //Private: Check if square left character is not equal to value
 bool Game::checkNotLeft(Character character, int value) {
 	if (map.at(character.getY()).at(character.getX() - 1) != value) {
-		return true;
-	}
-	else {
-		return false;
-	}
-}
-
-//Private: Check if square right of character is equal to value
-bool Game::checkRight(Character character, int value) {
-	if (map.at(character.getY()).at(character.getX() + 1) == value) {
 		return true;
 	}
 	else {
@@ -361,6 +321,7 @@ void Game::inputDirection(Direction direction) {
 
 //Private: Get positions of characters for AI
 std::vector<std::vector<int>> Game::getPositions() {
+	//Positions must be added to the vector in this order since this is the order the AI will assume
 	std::vector<std::vector<int>> returnVector;
 	returnVector.push_back(pacman.getPosition());
 	returnVector.push_back(blinky.getPosition());
@@ -372,6 +333,7 @@ std::vector<std::vector<int>> Game::getPositions() {
 
 //Private: Get directions of characters for AI
 std::vector<Direction> Game::getDirections() {
+	//Directions must be added to the vector in this order since this is the order the AI will assume
 	std::vector<Direction> returnVector;
 	returnVector.push_back(pacman.getDirection());
 	returnVector.push_back(blinky.getDirection());

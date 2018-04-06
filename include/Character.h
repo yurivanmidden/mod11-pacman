@@ -21,7 +21,7 @@ private:
 
 public:
 	Character() {}//Default constructor for compiler
-	Character::Character(GameObjectStruct inputObject, std::vector<int> entrance, std::vector<int> corner);//Constructor
+	Character(GameObjectStruct inputObject, std::vector<int> entrance, std::vector<int> corner);//Constructor
 	void reinit();//Reinitialize character
 
 	//AI getters and setters
@@ -55,6 +55,5 @@ public:
 
 	std::vector<int> getPosition() { return { object.x, object.y }; }//Get position as vector
 };
-
 
 #endif //PACMAN_CHARACTER_H

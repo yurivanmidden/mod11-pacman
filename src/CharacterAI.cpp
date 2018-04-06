@@ -60,10 +60,10 @@ std::vector<int> CharacterAI::setTarget(std::vector<std::vector<int>> charPositi
 		return pinkyTargeting(charPositions, charDirections);
 		break;
 	case INKY:
-		return inkyTargeting(charPositions, charDirections);//NEEDS TO BE IMPLEMENTED
+		return inkyTargeting(charPositions, charDirections);
 		break;
 	case CLYDE:
-		return clydeTargeting(charPositions, charDirections);//NEEDS TO BE IMPLEMENTED
+		return clydeTargeting(charPositions, charDirections);
 		break;
 	}
 }
